@@ -6,7 +6,21 @@
 </head>
 
 <body>
-    <h1>Calendar working</h1>
+    <h1>My Calendar</h1>
+    <table>
+            <tr>
+              <th>Name</th>
+              <th>Start</th>
+              <th>End</th>
+            </tr>
+            {% for row in rows%}
+                <tr>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2].strftime('%H:%M') }}</td>
+                    <td>{{ row[3].strftime('%H:%M') }}</td>
+                </tr>
+            {% endfor %}
+      </table>
 </body>
 
 </html>
