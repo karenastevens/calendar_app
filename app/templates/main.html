@@ -7,6 +7,35 @@
 
 <body>
     <h1>My Calendar</h1>
+    <!-- Appointment Form-->
+    <form method="post" action="/">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }}
+            {{ form.name }}
+        </p>
+        <p>
+            {{ form.start_date.label }}
+            {{ form.start_date }}
+            {{ form.start_time }}
+        </p>
+        <p>
+            {{ form.end_date.label }}
+            {{ form.end_date }}
+            {{ form.end_time }}
+        </p>
+        <p>
+            {{ form.description.label }}
+            {{ form.description }}
+        </p>
+        <p>
+            {{ form.private.label }}
+            {{ form.private }}
+        </p>
+        <p>
+            {{ form.submit }}
+        </p>
+    </form>
     <table>
             <tr>
               <th>Name</th>
