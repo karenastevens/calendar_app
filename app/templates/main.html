@@ -23,6 +23,14 @@
             {{ form.end_date.label }}
             {{ form.end_date }}
             {{ form.end_time }}
+
+            {% if form.end_date.errors %}
+                <ul class="errors">
+                    {% for error in form.end_date.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </p>
         <p>
             {{ form.description.label }}
